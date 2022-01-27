@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log in</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel=stylesheet href="style/login.css" type="text/css">
+    <script src="script/summer/summer.window.js"></script>
+    <script src="script/summer/summer.js"></script>
+    <script src="script/summer/config.js"></script>
+    <script src="script/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+  
+    <div class='divblur'>
+        <div class='head'><center><i><u><h1 id="heading"></h1></i></u></center></div>
+
+
+    <script>
+      var hour = new Date().getHours();
+      var greet;
+      if(hour < 12){
+        greet="Good Morning";
+      }else if(hour==12){
+        greet="Good noon";
+      }else if(hour < 16){
+        greet="Good Afternoon";
+      }else if(hour >= 16){
+        greet="Good Evening"
+      }
+    
+      var t = 0;
+      var txt = greet;
+      var speed = 150;
+      function typeWriter() {
+      if (t < txt.length) {
+        document.getElementById("heading").innerHTML += txt.charAt(t);
+        t++;
+        setTimeout(typeWriter, speed);
+        };
+      }
+    
+      setTimeout(typeWriter, 1000);
+      summer.say(greet);
+    </script>
+
+    <div class="login">
+        <h2><center>Login</center></h2>
+        <form action="login/login.php" method="post">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required><br><br>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required><br>
+            <font size=2><a href="signup.html">Don't have an account?SignUp</font></a><br>
+            <button class="submit" type="submit"><i class="fas fa-sign-in-alt"></i>Submit</button>
+        </form>
+    </div>
+
+    <div class="info">
+      <div class="inf">
+      <pre><em>
+My best wishes are with you and I welcome you
+on the behalf of my creator - Toshith. You can 
+create an account to access me i.e., summer to
+get more a personalised assistant by creating 
+an account. Some tools and apps would also be
+added soon that would be availaible on the tools
+page. 
+You can click on about me to know more about me!
+      </em></pre>
+        <button id="abtme" style="background-color: rgba(255,255,255,0.2);outline:none;border:none;color:white;font-weight: 800;border-radius: 40%;height: 5%;" onclick='abtme()'><i>About Me</i></button>
+        </div>
+    </div>
+    <script>
+        function abtme() {
+            summer.say("I am an artificially intelligent program.");
+            window.setTimeout(summer.say("Toshith designed me taking inspiration from jarvis and friday"),600)
+        }
+    </script>
+</div>
+
+
+</body>
+</html>

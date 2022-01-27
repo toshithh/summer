@@ -1,0 +1,13 @@
+body{
+    background-image: url("Wallpapers/desktop/snowy-mount.jpg");
+    background-size: cover;
+    background-repeat: none;
+}
+.form{
+    vertical-align: middle;
+    left:25%;
+    width:50%;
+}
+input{
+    max-width: 90%;
+}

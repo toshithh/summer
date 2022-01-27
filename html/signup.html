@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="style/signup.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1>Create Account</h1>
+<div class="frm">
+<form action="login/register.php" method="post">
+<table>
+<tr>
+<td class="left">Username:</td>
+<td><input type="text" name="username" maxlength="240" placeholder="Create username" required></td>
+</tr>
+<tr>
+<td class="left">Password:</td>
+<td><input type="password" name="password" placeholder="Create password"  maxlength="250" required></td>
+</tr>
+<tr>
+<td class="left">Email ID:</td>
+<td><input type="email" name="email" placeholder="Enter email id"  maxlength="240" required></td>
+</tr>
+<tr>
+<td class="left">FirstName:</td>
+<td><input type="text" name="firstname" placeholder="Enter first name"  maxlength="100" required></td>
+</tr>
+<tr>
+<td class="left">LastName:</td>
+<td><input type="text" name="lastname" placeholder="Enter Last Name" maxlength="100" required></td>
+</tr>
+<tr>
+<td class="left">Sex:</td>
+<td><select name="sex" required>
+<option value="">Select</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Other">Other</option>
+</select></td>
+</tr>
+</table>
+<input type="submit" name="signup" value="SignUp" style="width:10%;height:30px;">
+</form>
+</div>
+<div class="ptc">
+	<div class='priv'>
+<h2>Terms And Conditions</h2>
+<pre>Lorem ipsum lorem ipsum trial trial one one two
+
+</pre>
+</div>
+</div>
+</body>
+</html>
